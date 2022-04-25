@@ -18,7 +18,18 @@
 .webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}
 
 
-.app {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/* Agregaremos algo de estilo para visualizar el 
+   elemento sobre el que vamos a realizar la prueba */
+
+body {
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+   .app {
     background-color: black;
     color: white;
     font-size: 2rem;
@@ -31,6 +42,7 @@
   @media screen and (orientation: portrait) {
     /* Cubre toda la pantalla del dispositivo */
     .mensaje {
+        font-family:sans-serif;
       position: fixed;
       margin: auto;
       left: 0;
@@ -45,16 +57,33 @@
       
       /* Un color de fondo */
       
-      background-color: white;
+      background-color: #00a3fd;
+        color: white;
       /* Debemos superponerlo */
       z-index: 1000;
     }
+      .circle {
+          background: #fff;
+          width: 60px;
+          height: 60px;
+          
+          position: fixed;
+          z-index: 1000;
+          
+          border-radius: 50px;
+          margin-top: 80vh;
+          
+      }
+      .mensaje img {
+          max-width: 60px;
+      }
+      
+      .mensaje .logo {
+          max-width: 75vw;
+      }
+      
     
-    /* El texto que vamos a mostrar */
-    .mensaje::before {
-      content: "Voltea tu dispositivo";
-      font-size: 2rem;
-    }
+
     
     .app {
       display: none;
